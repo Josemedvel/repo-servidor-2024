@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <script src="scripts.js"></script>
+    <style>
+        .tarea{
+            background-color: aliceblue;
+            border-radius: 20px;
+            margin: 10px;
+            padding-top:5px;
+            padding-bottom: 5px;
+        }
+        .tarea span{
+            margin: 5px;
+        }
+        button{
+            margin: 5px;
+        }
+    </style>
+    <title>Lista de tareas</title>
+</head>
+<body>
+    <h1>Lista de tareas</h1>
+    <p>Introduce tu tarea: <input type="text" id="campo-tarea"> <button id="annadir-boton">Añadir tarea</button><button id="borrar-lista-boton">Borrar tareas</button></p>
+    <hr>
+    <section id="seccion-tareas">
+    </section>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+    <title>Menú semanal (Con AJAX y JQuery)</title>
+    <style>
+        .tabla{
+            border:1px solid black;
+        }
+        .tabla td{
+            border:1px solid black;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            function addPlatos(){
+                let tabla = document.getElementById("tabla");
+                $.ajax({
+                    type: "POST",
+                    url:"platos.php",
+                    data:{},
+                    success: function(data){
+                        $("#tabla").empty();
+                        let platos = JSON.parse(data);
+                        platos.forEach(function(plato){
+                            let fila = document.createElement("tr");
+                            let columna = document.createElement("td");
+                            fila.append(columna);
+                            columna.innerText = plato;
+                            $("#tabla").append(fila)
+                        });
+                    }
+                });
+            }
+            addPlatos();
+            setInterval(addPlatos, 10000);
+        });
+    </script>
+</head>
+<body>
+<table class="tabla">
+<thead>
+    <tr>
+        <th>NOMBRE DEL PLATO:</th>
+    </tr>
+</thead>
+<tbody id="tabla">
+
+</tbody>
+</table>
+<script>
+    
+</script>
+</body>
+</html>

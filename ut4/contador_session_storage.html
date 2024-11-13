@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador JS localStorage</title>
+    <script>
+        window.onload = function(){
+            let botonSuma = document.getElementById("botonsuma");
+            let botonResta = document.getElementById("botonresta");
+            let textoValor = document.getElementById("valor");
+            let valor = 0;
+            
+            if(localStorage.getItem("valor") != null){
+                valor = localStorage.getItem("valor");
+                textoValor.innerText = valor;
+            }
+
+            botonSuma.addEventListener("click", () =>{
+                valor = valor + 1;
+                localStorage.setItem("valor", valor);
+                textoValor.innerText = valor;
+            });
+            botonResta.addEventListener("click", () =>{
+                valor = valor - 1;
+                localStorage.setItem("valor", valor);
+                textoValor.innerText = valor;
+            });
+
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Este es un ejemplo de localStorage</h1>
+        <button id="botonsuma">+</button>
+        <span id="valor">0</span>
+        <button id="botonresta">-</button>
+        
+</body>
+</html>
