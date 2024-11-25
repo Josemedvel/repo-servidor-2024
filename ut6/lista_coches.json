@@ -1,0 +1,18 @@
+[
+    {
+        "dniDuenno": "12344123A",
+        "km": 100000,
+        "marca": "Renault",
+        "modelo": "Clio",
+        "matricula": "1235GSP",
+        "precio": 15000.7
+    },
+    {
+        "dniDuenno": "36323456B",
+        "km": 200500,
+        "marca": "Volkswagen",
+        "modelo": "Polo",
+        "matricula": "8907JSK",
+        "precio": 16400
+    }
+]
