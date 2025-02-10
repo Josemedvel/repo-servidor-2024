@@ -1,0 +1,8 @@
+.header-list{
+    list-style-type: none;
+    display: flex;
+}
+.footer-list{
+    list-style-type: none;
+    display: flex;
+}

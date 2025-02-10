@@ -1,0 +1,17 @@
+<%- include("./partials/header.ejs") %>
+<h2>Información de la petición</h2>
+
+<% if (typeof datos === "object" && !Array.isArray(datos)) { // para recorrer el JSON%>
+    <table border="1">
+        <% Object.keys(datos).forEach(key => { %>
+            <tr>
+                <th><%= key %></th>
+                <td><%= JSON.stringify(datos[key]) %></td>
+            </tr>
+        <% }) %>
+    </table>
+<% } else { %>
+    <p><%= JSON.stringify(datos) %></p>
+<% } %>
+
+<%- include("./partials/footer.ejs") %>

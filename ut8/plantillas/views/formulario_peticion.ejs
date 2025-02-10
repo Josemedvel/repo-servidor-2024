@@ -1,0 +1,13 @@
+<form action="/peticion" method="post">
+    <p>Endpoint: <input type="text" name="endpoint" required></p>
+    <p>Tipo:
+        <select name="tipo">
+            <option value="GET">GET</option>
+            <option value="POST">POST</option>
+            <option value="PUT">PUT</option>
+            <option value="DELETE">DELETE</option>
+        </select>
+    </p>
+    <p>Cuerpo de la petición (JSON, opcional): <textarea name="body"></textarea></p>
+    <button type="submit">Enviar</button>
+</form>
